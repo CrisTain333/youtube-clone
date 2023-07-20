@@ -11,8 +11,6 @@ export const AppContext = ({ children }) => {
     useState("New");
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  console.log(mobileMenu);
-
   useEffect(() => {
     fetchSelectedCategoryData(selectedCategory);
   }, [selectedCategory]);
@@ -22,7 +20,6 @@ export const AppContext = ({ children }) => {
     fetchDataFromApi(`search/?q=${query}`).then(
       ({ contents }) => {
         console.log(contents);
-
         setSearchResults(contents);
         setLoading(false);
       }

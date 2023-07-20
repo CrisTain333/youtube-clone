@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { AiFillHome, AiOutlineFlag } from "react-icons/ai";
 import {
@@ -132,7 +132,14 @@ const Sidebar = () => {
         })}
         <hr className="my-5 border-white/[0.2]" />
         <div className="text-white/[0.5] text-[12px]">
-          Clone by: Cristain
+          Clone by:{" "}
+          <Link
+            to="https://github.com/CrisTain333"
+            className="text-blue-600 underline"
+            target="_blank"
+          >
+            Cristain
+          </Link>
         </div>
       </div>
     </div>
